@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./favicon.png" />
+  <link rel="manifest" href="./app.webmanifest">
+  <meta name="dicoding:email" content="esafaizalg25@gmail.com">
+  <meta name="theme-color" content="#06D001"/>
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <button class="back-button" onclick="history.back()">Back</button>
+  <div class="container">
+    <h1>Shopping Cart</h1>
+    <div class="cart-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Cart items will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </div>
+    <div class="summary-card">
+      <h2>Order Summary</h2>
+      <p>Total: <span id="cart-total"></span></p>
+      <a href="checkout.html" class="checkout-btn">Checkout</a>
+    </div>
+  </div>
+</body>
+</html>

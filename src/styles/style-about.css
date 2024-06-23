@@ -1,0 +1,144 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ff9800;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #2c7865;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+header h1:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #2c7865;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Main content styles */
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+/* Team member styles */
+.team-member {
+  background-color: #fefded;
+  border: 1px solid #3a3d45;
+  border-radius: 12px;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: black;
+}
+
+.team-member p {
+  margin: 10px 0;
+  color: #b0b3b8;
+  font-size: 1em;
+}
+
+.team-member .social-icons {
+  margin-top: 15px;
+}
+
+.team-member .social-icons a {
+  margin: 0 10px;
+}
+
+.team-member .social-icons img {
+  height: 24px;
+  width: 24px;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 95%;
+  }
+}
